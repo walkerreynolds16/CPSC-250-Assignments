@@ -25,7 +25,7 @@ public class Robot {
 
 			writer = new PrintWriter(outputFile);
 
-			do {//while the input file has a next line
+			while (scan.hasNextLine()) {//while the input file has a next line
 
 				String line = scan.nextLine();//splits the line
 
@@ -45,7 +45,7 @@ public class Robot {
 						throw new InvalidRobotInstructionException();
 					}
 
-					 {//while the line has a next command
+					while (split.hasNext()) {//while the line has a next command
 
 						String direction = split.next();
 						int numOfMoves = split.nextInt();
@@ -87,7 +87,7 @@ public class Robot {
 				} finally {
 					split.close();
 				}
-			}while (scan.hasNextLine());
+			}
 
 		} catch (FileNotFoundException e) {
 			System.out.println("Input file not found.");
