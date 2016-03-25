@@ -84,15 +84,9 @@ public class Robot {
 				} catch (NoSuchElementException e) {
 					throw new InvalidRobotInstructionException();
 
-				} 
-				catch( InvalidRobotInstructionException e)
-                {
-                    throw new InvalidRobotInstructionException();
-                }
-				finally {
+				} finally {
 					split.close();
 				}
-				
 			}while (scan.hasNextLine());
 
 		} catch (FileNotFoundException e) {
