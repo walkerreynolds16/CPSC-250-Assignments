@@ -45,7 +45,7 @@ public class Robot {
 						throw new InvalidRobotInstructionException();
 					}
 
-					do {//while the line has a next command
+					 {//while the line has a next command
 
 						String direction = split.next();
 						int numOfMoves = split.nextInt();
@@ -70,7 +70,7 @@ public class Robot {
 								|| robotY > gridRows || robotY < 0) {
 							isTerminated = true;
 						}
-					}while (split.hasNext());
+					}
 
 					if (isTerminated) {
 						writer.println("terminated");
