@@ -41,7 +41,7 @@ public class Robot {
 					int robotY = split.nextInt();//initial robot y
 					int robotX = split.nextInt();//initial robot x
 
-					if (gridRows < 1 || gridCols < 1) {//checks if the robot is outside the grid initially, if so throw an exception
+					if (gridCols < 1 || gridRows < 1) {//checks if the robot is outside the grid initially, if so throw an exception
 						throw new InvalidRobotInstructionException();
 					}
 
